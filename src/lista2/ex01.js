@@ -1,6 +1,6 @@
 /*: Implemente uma pilha usando a implementação de duas filas básicas. */
 
-import Fila from './Fila.js';
+import Fila from '../Fila.js';
 
 class PilhaFila {
     constructor(tam = 10) {
