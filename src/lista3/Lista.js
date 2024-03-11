@@ -1,11 +1,11 @@
-import Node from "./Node_m.js";
+import Node from "./Node.js";
 
 class listaLigada {
     constructor() {
         this.head = new Node();
         this.count = 0;
     }
-    push(x) {
+    add(element) {
         const newNode = new Node();
         let current;
         if (this.newNode === null) {
@@ -43,7 +43,7 @@ class listaLigada {
                 previous.next = current.next;
             }
             this.count--;
-            return current.x;
+            return current.element;
         }
         console("empty list");
     }
@@ -60,9 +60,9 @@ class listaLigada {
         }
         return console.log("empty list");
     }
-    insertAt(x, index) {
+    insertAt(element, index) {
         if (index >= 0 && index <= this.count) {
-            const newNode = new Node(x);
+            const newNode = new Node(element);
             if (index === 0) { // adicionar na primeira posicao
                 const current = this.head;
                 newNode.next = current;
@@ -80,7 +80,7 @@ class listaLigada {
     indexOf(x) {
         let current = this.head;
         for (let i = 0; i < this.count && current != null; i++) {
-            if (this.equalsFn(x, current.x)) {
+            if (this.equalsFn(x, current.element)) {
                 return i;
             }
             current = current.next;
@@ -112,6 +112,9 @@ class listaLigada {
 
 
 }
-const lista = new listaLigada();
-lista.push(15);
-lista.push(10);
+
+const linkedList = new listaLigada();
+// lista.push(15);
+// lista.push(10);
+
+export default listaLigada;
