@@ -21,31 +21,21 @@ class listaLigada {
     }
     removeAt(index) {
         if (!this.isEmpty()) {
-            // verifica valores fora do intervalo
             if (index >= 0 && index < this.count) {
                 let current = this.head;
-                // remove o primeiro elemento
+                let previous;
                 if (index === 0) {
-                    // a cabeça da lista "pula/remove" o primeiro elemento
                     this.head = current.next;
                 } else {
-                    // variavel pra guardar o elemento anterior ao current
-                    let previous
-                    // iterando ate percorrer a lista inteira e remover o elemento do final/ou meio usando o previous/previous.next do current
-                    for (let i = 0; i < index; i++) {
-                        // previous recebe o elemento atual que deseja excluir
-                        previous = current;
-                        // o atual pega o nó dele e do proximo (pode ser null ou outro elemento)
-                        current = current.next;
-                    }
+                    previous = this.getIndexAt(index - 1);
+                    current = previous.next;
+                    previous.next = current.next;
                 }
-                // faz ligacao de previous com o next de current: pula esse elemento para remove-lo
-                previous.next = current.next;
+                this.count--;
+                return current.element;
             }
-            this.count--;
-            return current.element;
         }
-        console("empty list");
+        throw new Error("empty list");
     }
 
     getIndexAt(index) {

@@ -1,7 +1,7 @@
 /*Implemente uma pilha de tamanho dinâmico usando uma lista simplesmente 
 encadeada. */
 
-import Lista from "./Lista.js";
+import listaLigada from "./Lista.js";
 
 
 class PilhaLista {
@@ -38,7 +38,7 @@ class PilhaLista {
     }
 }
 
-import Pilha from "../Pilha";
+import Pilha from "../Pilha.js";
 
 const pilha = new PilhaLista();
 
@@ -49,7 +49,7 @@ pilha.push(3);
 pilha.push(4);
 pilha.push(5);
 
-console.log("elemento do topo: ", pilha.topo());
+console.log("elemento do topo: ", pilha.top());
 
 console.log("tamanho da pilha: ", pilha.size());
 
