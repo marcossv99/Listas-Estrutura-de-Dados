@@ -1,3 +1,5 @@
+/*: Implemente uma pilha usando a implementação de duas filas básicas. */
+
 import Fila from './Fila.js';
 
 class PilhaFila {
@@ -79,18 +81,6 @@ pilha.push(1);
 pilha.push(2);
 pilha.push(3);
 pilha.push(4);
-pilha.push(5);
 pilha.pop();
-pilha.push(6);
-pilha.push(7);
-pilha.push(8);
-pilha.push(9);
-pilha.push(10);
 
-console.log(pilha.pop());
-
-console.log(pilha.peek());
-
-console.log(pilha.isEmpty());
-
-console.log(pilha.isFull());
+console.log(pilha.toString());

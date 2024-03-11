@@ -14,7 +14,7 @@ class Fila {
     }
     dequeue() {
         if (!this.isEmpty()) {
-            this.inicio++;
+            this.inicio++;  
             return;
         }
         throw new Error("Queueunderflow");

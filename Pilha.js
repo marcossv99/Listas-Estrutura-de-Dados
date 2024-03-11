@@ -45,4 +45,4 @@ class Pilha {
         return this.size() === this.tam;
     }
 }
-
+export default Pilha;
