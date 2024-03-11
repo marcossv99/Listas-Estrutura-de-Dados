@@ -20,7 +20,7 @@ class PilhaLista {
     }
     top() {
         if (!this.isEmpty()) {
-            return this.lista.getHead().element; // retorna o elemento da cabeça da lista
+            return this.lista.getIndexAt(this.lista.size() - 1).element; // retorna o elemento da cabeça da lista
         }
         console.log("empty stack");
     }
@@ -55,8 +55,9 @@ console.log("tamanho da pilha: ", pilha.size());
 
 console.log("pilha vazia: ", pilha.isEmpty());
 
+console.log("removendo...")
 pilha.pop();
 pilha.pop();
-pilha.pop();
+
 
 console.log("pilha depois dos pop: ", pilha.toString());

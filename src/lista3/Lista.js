@@ -6,7 +6,7 @@ class listaLigada {
         this.count = 0;
     }
     add(element) {
-        const newNode = new Node();
+        const newNode = new Node(element);
         let current;
         if (this.newNode === null) {
             this.head = newNode;
