@@ -42,4 +42,4 @@ function inverter(palavra) {
 
 let palavra = "TADS";
 let pInvertida = inverter(palavra);
-console.log(`Palavra invertida: ${pInvertida}`);
+console.log(`Palavra invertida: ${pInvertida}`); 

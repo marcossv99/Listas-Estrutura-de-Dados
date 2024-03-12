@@ -8,7 +8,7 @@ class listaLigada {
     add(element) {
         const newNode = new Node(element);
         let current;
-        if (this.newNode === null) {
+        if (this.head === null) {
             this.head = newNode;
         } else {
             current = this.head;
@@ -60,7 +60,7 @@ class listaLigada {
             } else {
                 const previous = this.getIndexAt(index - 1);
                 const current = previous.next;
-                node.next = current;
+                newNode.next = current;
                 previous.next = newNode;
             }
             this.count++; // atualiza o tamanho da lista
