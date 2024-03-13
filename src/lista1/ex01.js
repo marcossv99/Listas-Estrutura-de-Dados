@@ -22,7 +22,7 @@ class Pilha {
     return this.items.pop();
   }
 }
-function inverter(palavra) {
+ inverter(palavra) {
   let p = new Pilha();
   for (let i = 0; i < palavra.length; i++) {
     p.push(palavra[i]);
